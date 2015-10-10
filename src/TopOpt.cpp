@@ -81,7 +81,12 @@ bool TopOpt::step(tfloat& compliance, tfloat& volume, tfloat& change, bool verbo
 	}
 }
 
-void TopOpt::exportResultMatlab(Matrix *x, int iteration) {
+void TopOpt::exportResults() const
+{
+	exportResultTxt(x.get(),mIter);
+}
+
+void TopOpt::exportResultMatlab(Matrix *x, int iteration)const {
 	std::cout << std::endl;
 	printf("x = [");
 	x->print();
@@ -99,7 +104,7 @@ void TopOpt::exportResultMatlab(Matrix *x, int iteration) {
 	std::cout << std::endl << std::flush;
 }
 
-void TopOpt::exportResultTxt(Matrix *x, int iteration)
+void TopOpt::exportResultTxt(Matrix *x, int iteration)const
 {
 	ofstream myfile;
 	myfile.open("example.txt");

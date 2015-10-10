@@ -26,6 +26,8 @@ public:
 	bool step(tfloat& compliance, tfloat& volume, tfloat& change, bool verbose = false);
 	const Matrix& getX()const{ return *x; }
 	void setPassiveRadius(tfloat r) { mPassiveRadius = r; }
+
+	void exportResults()const;
 private:
 	int mIter;
 	tfloat mMaxChange;
@@ -43,8 +45,8 @@ private:
     void initFreeDofs();
     void defineLoads();
     void calculatePassive();
-    void exportResultMatlab(Matrix *x, int iteration);
-	void exportResultTxt(Matrix *x, int iteration);
+    void exportResultMatlab(Matrix *x, int iteration)const;
+	void exportResultTxt(Matrix *x, int iteration)const;
 private:
 
     tfloat objectiveFunctionAndSensitivityAnalyses();

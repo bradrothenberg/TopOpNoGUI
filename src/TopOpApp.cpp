@@ -28,6 +28,7 @@ bool go = true;
 while (go) {
 	go = topOpt->step(compliance, volume, change, true);
 }
+topOpt->exportResults();
 PressEnterToContinue();
 return 0;
 }
