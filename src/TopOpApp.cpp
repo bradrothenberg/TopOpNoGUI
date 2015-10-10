@@ -12,8 +12,8 @@ void PressEnterToContinue()
 
 int main() {
 	const auto eX = 120;
-	const auto eY = 80;
-	const auto volFrac = .6;
+	const auto eY = 40;
+	const auto volFrac = .5;
 	const auto penal = 3.0;
 	const auto rmin = 3.0;
 	const auto maxChange = .01;
