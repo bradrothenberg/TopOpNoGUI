@@ -107,7 +107,7 @@ void TopOpt::exportResultMatlab(Matrix *x, int iteration)const {
 void TopOpt::exportResultTxt(Matrix *x, int iteration)const
 {
 	ofstream myfile;
-	myfile.open("example.txt");
+	myfile.open("../../TopOp" + std::to_string(nelx) + "X" + std::to_string(nely) + ".txt");
 	myfile << "iteration: " << std::to_string(iteration) << std::endl;
 
 	for (int i = 0; i < x->getRows(); i++) {
